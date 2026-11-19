@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ronald F. Sobrepena Jr. — Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Intel+One+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+    <header class="top-banner">
+        <div class="banner-content">
+            <span class="logo-text">portfolio</span>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <button type="button" id="contactBtn" class="contact-btn">Contact Me</button>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-text">
+            <h1>Hi, I am <span class="typed-name">Ronald F. Sobrepena Jr.</span></h1>
+            <h3 class="hero-subtitle">Junior Web Developer</h3>
+            <p class="hero-tagline">"Code with patience, design with passion, and success will follow."</p>
+            <a href="#projects" class="inline-link">View my work →</a>
+        </div>
+        <div class="hero-image-wrapper">
+            <img src="Ronald_Prism-1.jpg" alt="Ronald F. Sobrepena Jr.">
+        </div>
+    </section>
+
+    <section id="about" class="content-section">
+        <h2>About Me</h2>
+        <div class="about-grid">
+            <div class="about-avatar-box">
+                <img src="Ronald_Prism-1.jpg" alt="Ronald">
+            </div>
+            <div class="about-description">
+                <p>
+                    A <span class="highlight-text">Junior Web Developer</span> and <span class="highlight-text">Designer</span> based in Baguio City. I love transforming ideas into functional, user-friendly, and responsive web applications using HTML, CSS, JavaScript, and Java.
+                </p>
+                <p>
+                    I am continuously learning and exploring new tools to improve my creations. Beyond coding, I enjoy creating digital designs and bringing creative concepts to life.
+                </p>
+                <div class="about-containers">
+                    <span>Web Development</span>
+                    <span>Responsive Design</span>
+                    <span>UI/UX Design</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="content-section">
+        <h2>My Tech Stack</h2>
+        <div class="tech-icons-row">
+            <div class="tech-card"><img src="html.png" alt="HTML"><span>HTML</span></div>
+            <div class="tech-card"><img src="css.png" alt="CSS"><span>CSS</span></div>
+            <div class="tech-card"><img src="js.png" alt="JS"><span>JavaScript</span></div>
+            <div class="tech-card"><img src="figma.png" alt="Figma"><span>Figma</span></div>
+            <div class="tech-card"><img src="java.png" alt="Java"><span>Java</span></div>
+        </div>
+    </section>
+
+    <section id="projects" class="content-section">
+        <div class="projects-header">
+            <div>
+                <h2>My Projects</h2>
+                <p class="section-description">Here are some of the projects I've worked on, showcasing my skills in building functional, visually appealing websites.</p>
+            </div>
+            <a href="https://drive.google.com/drive/folders/1ipBb4PK6PuUe1SOfcrmp9laQTW4sYjky?usp=drive_link" target="_blank" rel="noopener noreferrer" class="drive-btn">
+                 View All in Drive →
+            </a>
+        </div>
+
+        <div class="swipe-gallery">
+            <button type="button" id="prevProjectBtn" class="swipe-nav-btn" aria-label="Previous project">←</button>
+
+            <div class="swipe-stage" id="swipeStage">
+                <article class="swipe-card is-active" data-index="0" onclick="handleCardClick(0)">
+                    <img src="Cafe Project.png" alt="Cafe Orion Project">
+                </article>
+
+                <article class="swipe-card is-next" data-index="1" onclick="handleCardClick(1)">
+                    <img src="Research Project.png" alt="Sakay Project">
+                </article>
+
+                <article class="swipe-card is-prev" data-index="2" onclick="handleCardClick(2)">
+                    <img src="Guess The Number.png" alt="Guess The Number Game">
+                </article>
+            </div>
+
+            <button type="button" id="nextProjectBtn" class="swipe-nav-btn" aria-label="Next project">→</button>
+        </div>
+
+        <div class="active-project-info">
+            <h3 id="activeProjectTitle"></h3>
+            <p id="activeProjectDesc"></p>
+            <button type="button" id="activeViewProjectBtn" class="view-project-btn">View Project</button>
+        </div>
+
+        <div class="swipe-dots" id="swipeDots">
+            <button type="button" class="swipe-dot active" data-dot="0" aria-label="Show Cafe Orion"></button>
+            <button type="button" class="swipe-dot" data-dot="1" aria-label="Show Sakay"></button>
+            <button type="button" class="swipe-dot" data-dot="2" aria-label="Show Guess The Number"></button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </div>
+            <div class="footer-connect">
+                <h4>Connect</h4>
+                <p>Email: ronaldjr.sobrepena09@gmail.com</p>
+                <p>Phone: +63 9562244066</p>
+            </div>
+        </div>
+        <p class="footer-bottom">© 2026 Ronald F. Sobrepena Jr. All rights reserved.</p>
+    </footer>
+
+    <div id="contactModal" class="modal-backdrop">
+        <div class="modal-card">
+            <button type="button" id="closeModal" class="close-btn" aria-label="Close contact modal">&times;</button>
+            <h3>Get in Touch</h3>
+            <p>✉️ ronaldjr.sobrepena09@gmail.com</p>
+            <p>📞 +63 9562244066</p>
+            <p>📍 Baguio City, Philippines</p>
+        </div>
+    </div>
+
+    <div id="imagePreviewModal" class="modal-backdrop">
+        <div class="preview-card">
+            <button type="button" id="closePreview" class="close-btn" aria-label="Close image preview">&times;</button>
+            <h3 id="previewTitle">Project Title</h3>
+            <img id="previewImg" src="" alt="Project Preview">
+        </div>
+    </div>
+
+    <script src="portfolio.js"></script>
+</body>
+</html>
